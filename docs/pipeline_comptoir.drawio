@@ -1,0 +1,299 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="5m2N1tDZs5Ed9MpjFN6x">
+    <mxGraphModel dx="1202" dy="1064" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-3" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="224" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="&amp;nbsp;Fichier_erp.xlsx&amp;nbsp;&lt;br&gt;&amp;nbsp;Source ERP" vertex="1">
+          <mxGeometry height="60" width="130" x="159" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-5" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="224" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="&amp;nbsp;Nettoyage ERP&lt;br&gt;DuckDB / SQL&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="130" x="159" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-17" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="224" y="280" />
+              <mxPoint x="224" y="280" />
+            </Array>
+            <mxPoint x="224" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-4" parent="1" style="whiteSpace=wrap;html=1;rounded=0;align=center;opacity=70;" value="&lt;font style=&quot;&quot;&gt;&lt;br&gt;&lt;font&gt; TEST ERP&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;Valeurs manquantes /&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&amp;nbsp;cohérence des données&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="159" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-6" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="fichier_liaison.xlsx&lt;br&gt;Table de liaison &amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="130" x="349" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-8" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="Nettoyage liaison&lt;br&gt;DuckDB / SQL&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="130" x="349" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-21" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="409" y="290" />
+            </Array>
+            <mxPoint x="410" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-10" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&lt;font style=&quot;&quot;&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;TEST LIAISON&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;Valeurs manquantes /&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font&gt;&amp;nbsp;cohérence des clés&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="344" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-11" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;opacity=70;" target="-1U8SI7hMINDlOJEB-kr-14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="604" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="Fichier_web.xlsx&amp;nbsp;&lt;br&gt;&amp;nbsp;Source WEB" vertex="1">
+          <mxGeometry height="60" width="130" x="539" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-13" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="604" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="Nettoyage Web&lt;br&gt;Supprimer les sku manquants&lt;br&gt;DuckDB / SQL&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="130" x="539" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-25" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="599" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-15" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&lt;font style=&quot;&quot;&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;TEST WEB &lt;br&gt;1428 lignes attendues&lt;br&gt;sku non nul&lt;/div&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="534" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-19" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;opacity=70;" target="-1U8SI7hMINDlOJEB-kr-18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="224" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-16" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&#xa;Dédoublonnage ERP&#xa;DuckDB / SQL&#xa;&#xa;" vertex="1">
+          <mxGeometry height="60" width="120" x="164" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-18" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&lt;br&gt;TEST DOUBLONS&amp;nbsp;&lt;br&gt;0 doublon&lt;br&gt;825 lignes attendues&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="164" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-23" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;opacity=70;" target="-1U8SI7hMINDlOJEB-kr-22" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-20" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="Dédoublonnage liaison&lt;br/&gt;DuckDB / SQL" vertex="1">
+          <mxGeometry height="60" width="120" x="354" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-22" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="TEST DOUBLONS&amp;nbsp;&lt;br&gt;&amp;nbsp;0 doublon sur product_id&lt;br/&gt;825 lignes attendues" vertex="1">
+          <mxGeometry height="60" width="120" x="354" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-27" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;opacity=70;" target="-1U8SI7hMINDlOJEB-kr-26" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="604" y="350" as="sourcePoint" />
+            <mxPoint x="604" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-24" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&lt;br&gt;Dédoublonnage&amp;nbsp;&lt;br&gt;1 ligne par sku&lt;br&gt;DuckDB / SQL&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="544" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-26" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&lt;br&gt;TEST DOUBLONS&lt;br&gt;714 sku uniques&lt;br&gt;714 lignes attendues&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="544" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-39" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=70;" value="Jointure ERP + Liaison + Web&lt;br&gt;DuckDB / SQL&lt;br&gt;&lt;br&gt;ERP.product_id = liaison.product_id&lt;br&gt;liaison.id_web = WEB.sku&amp;nbsp;" vertex="1">
+          <mxGeometry height="100" width="220" x="304" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-31" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-22" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;opacity=70;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="419" y="600" as="sourcePoint" />
+            <mxPoint x="414" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-33" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;opacity=70;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="604" y="460" as="sourcePoint" />
+            <mxPoint x="419" y="548" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-34" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.471;entryY=-0.024;entryDx=0;entryDy=0;entryPerimeter=0;opacity=70;" target="-1U8SI7hMINDlOJEB-kr-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="224" y="460" as="sourcePoint" />
+            <mxPoint x="400" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-41" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-38" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="&amp;nbsp;TEST DE JOINTURE&lt;br&gt;Cohérence des clés &lt;br&gt;714 lignes attendues&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="130" x="349" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-45" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;opacity=70;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.3" y="985" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-40" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="Calcul du chiffre d&#39;affaires&amp;nbsp;&lt;br&gt;&amp;nbsp;DuckDB / SQL&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;CA produit = prix × total_sales&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;CA total = somme des CA produits&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="195" x="316.5" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-47" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.26" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-61" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="1032" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-44" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="TEST CHIFFRE D&#39;AFFAIRES&lt;br&gt;&lt;br&gt;&lt;div&gt;CA total attendu : &lt;b&gt;70 568,60 &lt;/b&gt;€ &amp;nbsp;&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="170.5" x="328" y="987" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-51" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.29" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-46" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="Calcul du z-score sur le prix&lt;br&gt;Python / pandas&lt;br&gt;&lt;br&gt;z = (prix - moyenne) / écart-type&amp;nbsp;" vertex="1">
+          <mxGeometry height="100" width="185.87" x="320.32" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-53" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="1420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-50" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="TEST Z-SCORE&lt;br&gt;&amp;nbsp;&lt;br&gt;30 vins premium attendus&lt;br&gt;règle : z &amp;gt; 2 &amp;nbsp;" vertex="1">
+          <mxGeometry height="90" width="149.51" x="338.5" y="1283" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-57" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="344.82" y="1520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-52" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="PREMIUM&lt;br&gt;z &amp;gt; 2" vertex="1">
+          <mxGeometry height="59" width="109.68" x="290" y="1421" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-54" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="418.5" y="1397" as="sourcePoint" />
+            <mxPoint x="338.5" y="1420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-59" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="474.82" y="1520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-55" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="ORDINAIRE&lt;br&gt;z &amp;lt;= 2" vertex="1">
+          <mxGeometry height="59" width="109.68" x="420" y="1421" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-56" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="premium.csv&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="284.84000000000003" y="1522.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-58" parent="1" style="whiteSpace=wrap;html=1;rounded=0;opacity=70;" value="ordinaires.csv" vertex="1">
+          <mxGeometry height="60" width="120" x="414.84000000000003" y="1521.5" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;nbsp;rapport_CA.xlsx&amp;nbsp; &lt;br&gt;CA par produit + CA total&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="149.51" x="570" y="1002" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Trigger Cron Kestra&lt;br&gt;Le 15 de chaque mois à 09h&lt;br&gt;0 9 15 * *&amp;nbsp;" vertex="1">
+          <mxGeometry height="110" width="214" x="302" y="-210" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Démarrage pipeline" vertex="1">
+          <mxGeometry height="30" width="70" x="374" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-69" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="-1U8SI7hMINDlOJEB-kr-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="-70" as="sourcePoint" />
+            <mxPoint x="280" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-70" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-65" style="endArrow=classic;html=1;rounded=0;entryX=0.443;entryY=-0.035;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" target="-1U8SI7hMINDlOJEB-kr-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="646" y="-60" as="sourcePoint" />
+            <mxPoint x="490" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-71" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-65" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="362" y="-60" as="sourcePoint" />
+            <mxPoint x="412" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-76" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-73" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Échec d&#39;une tâche" vertex="1">
+          <mxGeometry height="60" width="120" x="820" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-78" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-75" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&lt;br&gt;Retry Kestra&lt;br&gt;Nouvelle tentative&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="820" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-77" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="&amp;nbsp;Succès ?" vertex="1">
+          <mxGeometry height="60" width="120" x="820" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-79" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-77" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="610" y="370" as="sourcePoint" />
+            <mxPoint x="850" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-81" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-77" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="930" y="470" as="sourcePoint" />
+            <mxPoint x="920" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-82" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Oui&lt;br&gt;continuer Pipeline" vertex="1">
+          <mxGeometry height="50" width="100" x="780" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-86" edge="1" parent="1" source="-1U8SI7hMINDlOJEB-kr-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-83" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Non&lt;br&gt;Arrêt du Pipelinne" vertex="1">
+          <mxGeometry height="50" width="100" x="890" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-85" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Erreur visible&lt;br&gt;dans Kestra" vertex="1">
+          <mxGeometry height="60" width="120" x="880" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="-1U8SI7hMINDlOJEB-kr-87" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Exemple :&lt;br&gt;&lt;/b&gt;DuckDB indisponible" vertex="1">
+          <mxGeometry height="30" width="140" x="820" y="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
