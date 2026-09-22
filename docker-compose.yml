@@ -1,0 +1,9 @@
+services:
+  python:
+    build: .
+    container_name: comptoir-python
+    working_dir: /app
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
