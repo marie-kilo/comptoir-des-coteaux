@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
+
 """Analyse exploratoire des trois sources du Comptoir des Coteaux."""
 
 from pathlib import Path
 
 import pandas as pd
-
 
 DATA_DIR = Path("data")
 
@@ -25,10 +26,7 @@ def analyse_erp():
 
     print(f"\nproduct_id uniques : {erp['product_id'].nunique()}")
     print(f"product_id manquants : {erp['product_id'].isna().sum()}")
-    print(
-        "Doublons product_id : "
-        f"{erp['product_id'].duplicated().sum()}"
-    )
+    print(f"Doublons product_id : {erp['product_id'].duplicated().sum()}")
 
 
 def analyse_liaison():
@@ -46,18 +44,9 @@ def analyse_liaison():
     print("\nValeurs manquantes :")
     print(liaison.isna().sum())
 
-    print(
-        f"\nproduct_id uniques : "
-        f"{liaison['product_id'].nunique()}"
-    )
-    print(
-        f"id_web renseignés : "
-        f"{liaison['id_web'].notna().sum()}"
-    )
-    print(
-        f"id_web manquants : "
-        f"{liaison['id_web'].isna().sum()}"
-    )
+    print(f"\nproduct_id uniques : {liaison['product_id'].nunique()}")
+    print(f"id_web renseignés : {liaison['id_web'].notna().sum()}")
+    print(f"id_web manquants : {liaison['id_web'].isna().sum()}")
 
 
 def analyse_web():
@@ -76,18 +65,12 @@ def analyse_web():
 
     web_clean = web.dropna(subset=["sku"])
 
-    print(
-        f"Lignes après suppression des sku manquants : "
-        f"{len(web_clean)}"
-    )
+    print(f"Lignes après suppression des sku manquants : {len(web_clean)}")
     print(f"sku uniques : {web_clean['sku'].nunique()}")
 
     counts = web_clean["sku"].value_counts()
 
-    print(
-        "Tous les sku apparaissent exactement 2 fois : "
-        f"{(counts == 2).all()}"
-    )
+    print(f"Tous les sku apparaissent exactement 2 fois : {(counts == 2).all()}")
 
     print("\nRépartition post_type :")
     print(web_clean["post_type"].value_counts())
