@@ -29,3 +29,6 @@ Thumbs.db
 # Volumes Docker locaux
 docker-data/
 volumes/
+
+# Base DuckDB locale / fichiers de travail
+work/
