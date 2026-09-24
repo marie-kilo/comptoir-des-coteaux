@@ -1,0 +1,147 @@
+id: pipeline_comptoir
+namespace: comptoir.coteaux
+
+tasks:
+  - id: project
+    type: io.kestra.plugin.core.flow.WorkingDirectory
+
+    outputFiles:
+      - outputs/rapport_CA.xlsx
+      - outputs/premium.csv
+      - outputs/ordinaires.csv
+
+    tasks:
+      - id: clone_repository
+        type: io.kestra.plugin.git.Clone
+        url: https://github.com/marie-kilo/comptoir-des-coteaux.git
+        branch: main
+
+      - id: verify_repository
+        type: io.kestra.plugin.scripts.shell.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: alpine:3.20
+        commands:
+          - echo "Répertoire du projet :"
+          - pwd
+          - echo "Contenu du dépôt :"
+          - ls -la
+          - echo "Scripts disponibles :"
+          - ls -la scripts
+          - echo "Sources disponibles :"
+          - ls -la data
+
+      - id: clean_sources
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && mkdir -p work && python scripts/run_sql.py scripts/sql/01_clean_sources.sql
+
+      - id: test_cleaning
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/check_cleaning.py
+
+      - id: deduplicate_sources
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/run_sql.py scripts/sql/02_deduplicate_sources.sql
+
+      - id: test_deduplication
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/check_deduplication.py
+
+      - id: join_sources
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/run_sql.py scripts/sql/03_join_sources.sql
+
+      - id: test_join
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/check_join.py
+
+      - id: calculate_revenue
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/run_sql.py scripts/sql/04_calculate_revenue.sql
+
+      - id: test_revenue
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/check_revenue.py
+
+      - id: classify_wines
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/classify_wines.py
+
+      - id: test_zscore
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/check_zscore.py
+
+      - id: export_outputs
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/export_outputs.py
+
+      - id: test_outputs
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+        commands:
+          - cd "{{ workingDir }}" && python scripts/check_outputs.py
+
+triggers:
+  - id: monthly_schedule
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 9 15 * *"
+    timezone: Europe/Paris
+    

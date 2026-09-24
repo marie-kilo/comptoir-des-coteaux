@@ -1,6 +1,7 @@
 services:
   python:
     build: .
+    image: comptoir-python:latest
     container_name: comptoir-python
     working_dir: /app
     volumes:
