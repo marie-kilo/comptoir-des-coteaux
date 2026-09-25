@@ -6,9 +6,10 @@ tasks:
     type: io.kestra.plugin.core.flow.WorkingDirectory
 
     outputFiles:
+      - work/comptoir.duckdb
       - outputs/rapport_CA.xlsx
-      - outputs/premium.csv
-      - outputs/ordinaires.csv
+      - scripts/export_wine_category.py
+      - scripts/check_wine_category_export.py
 
     tasks:
       - id: clone_repository
@@ -53,7 +54,6 @@ tasks:
           maxAttempts: 3
           maxDuration: PT30S
           warningOnRetry: true
-          
 
       - id: test_cleaning
         type: io.kestra.plugin.scripts.python.Commands
@@ -79,7 +79,6 @@ tasks:
           maxAttempts: 3
           maxDuration: PT30S
           warningOnRetry: true
-
 
       - id: test_deduplication
         type: io.kestra.plugin.scripts.python.Commands
@@ -165,15 +164,15 @@ tasks:
         commands:
           - cd "{{ workingDir }}" && python scripts/check_zscore.py
 
-      - id: export_outputs
+      - id: export_revenue_report
         type: io.kestra.plugin.scripts.python.Commands
         taskRunner:
           type: io.kestra.plugin.scripts.runner.docker.Docker
         containerImage: comptoir-python:latest
         pythonVersion: "3.12"
         commands:
-          - cd "{{ workingDir }}" && python scripts/export_outputs.py
-        
+          - cd "{{ workingDir }}" && python scripts/export_revenue_report.py
+
         retry:
           type: constant
           interval: PT5S
@@ -181,15 +180,84 @@ tasks:
           maxDuration: PT30S
           warningOnRetry: true
 
-      - id: test_outputs
-        type: io.kestra.plugin.scripts.python.Commands
-        taskRunner:
-          type: io.kestra.plugin.scripts.runner.docker.Docker
-        containerImage: comptoir-python:latest
-        pythonVersion: "3.12"
-        commands:
-          - cd "{{ workingDir }}" && python scripts/check_outputs.py
+  - id: category_exports
+    type: io.kestra.plugin.core.flow.Parallel
 
+    tasks:
+      - id: premium_branch
+        type: io.kestra.plugin.core.flow.WorkingDirectory
+
+        inputFiles:
+          comptoir.duckdb: "{{ outputs.project.outputFiles['work/comptoir.duckdb'] }}"
+          export_wine_category.py: "{{ outputs.project.outputFiles['scripts/export_wine_category.py'] }}"
+          check_wine_category_export.py: "{{ outputs.project.outputFiles['scripts/check_wine_category_export.py'] }}"
+
+        outputFiles:
+          - premium.csv
+
+        tasks:
+          - id: export_premium
+            type: io.kestra.plugin.scripts.python.Commands
+            taskRunner:
+              type: io.kestra.plugin.scripts.runner.docker.Docker
+            containerImage: comptoir-python:latest
+            pythonVersion: "3.12"
+            commands:
+              - python export_wine_category.py comptoir.duckdb premium premium.csv
+
+            retry:
+              type: constant
+              interval: PT5S
+              maxAttempts: 3
+              maxDuration: PT30S
+              warningOnRetry: true
+
+          - id: test_premium
+            type: io.kestra.plugin.scripts.python.Commands
+            taskRunner:
+              type: io.kestra.plugin.scripts.runner.docker.Docker
+            containerImage: comptoir-python:latest
+            pythonVersion: "3.12"
+            commands:
+              - python check_wine_category_export.py premium.csv 30
+
+      - id: ordinary_branch
+        type: io.kestra.plugin.core.flow.WorkingDirectory
+
+        inputFiles:
+          comptoir.duckdb: "{{ outputs.project.outputFiles['work/comptoir.duckdb'] }}"
+          export_wine_category.py: "{{ outputs.project.outputFiles['scripts/export_wine_category.py'] }}"
+          check_wine_category_export.py: "{{ outputs.project.outputFiles['scripts/check_wine_category_export.py'] }}"
+
+        outputFiles:
+          - ordinaires.csv
+
+        tasks:
+          - id: export_ordinaire
+            type: io.kestra.plugin.scripts.python.Commands
+            taskRunner:
+              type: io.kestra.plugin.scripts.runner.docker.Docker
+            containerImage: comptoir-python:latest
+            pythonVersion: "3.12"
+            commands:
+              - python export_wine_category.py comptoir.duckdb ordinaire ordinaires.csv
+
+            retry:
+              type: constant
+              interval: PT5S
+              maxAttempts: 3
+              maxDuration: PT30S
+              warningOnRetry: true
+
+          - id: test_ordinaire
+            type: io.kestra.plugin.scripts.python.Commands
+            taskRunner:
+              type: io.kestra.plugin.scripts.runner.docker.Docker
+            containerImage: comptoir-python:latest
+            pythonVersion: "3.12"
+            commands:
+              - python check_wine_category_export.py ordinaires.csv 684
+              
 triggers:
   - id: monthly_schedule
     type: io.kestra.plugin.core.trigger.Schedule
