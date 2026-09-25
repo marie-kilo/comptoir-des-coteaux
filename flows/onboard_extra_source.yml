@@ -1,0 +1,34 @@
+id: onboard_extra_source
+namespace: comptoir.coteaux
+
+inputs:
+  - id: source_file
+    type: FILE
+    description: Nouvelle source à analyser
+    allowedFileExtensions:
+      - ".xlsx"
+      - ".xls"
+      - ".csv"
+
+tasks:
+  - id: project
+    type: io.kestra.plugin.core.flow.WorkingDirectory
+
+    tasks:
+      - id: clone_repository
+        type: io.kestra.plugin.git.Clone
+        url: https://github.com/marie-kilo/comptoir-des-coteaux.git
+        branch: main
+
+      - id: inspect_extra_source
+        type: io.kestra.plugin.scripts.python.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+        containerImage: comptoir-python:latest
+        pythonVersion: "3.12"
+
+        inputFiles:
+          extra_source_input: "{{ inputs.source_file }}"
+
+        commands:
+          - cd "{{ workingDir }}" && mkdir -p work && python scripts/inspect_extra_source.py extra_source_input
