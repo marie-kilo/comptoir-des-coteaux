@@ -16,6 +16,13 @@ tasks:
         url: https://github.com/marie-kilo/comptoir-des-coteaux.git
         branch: main
 
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
+
       - id: verify_repository
         type: io.kestra.plugin.scripts.shell.Commands
         taskRunner:
@@ -40,6 +47,14 @@ tasks:
         commands:
           - cd "{{ workingDir }}" && mkdir -p work && python scripts/run_sql.py scripts/sql/01_clean_sources.sql
 
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
+          
+
       - id: test_cleaning
         type: io.kestra.plugin.scripts.python.Commands
         taskRunner:
@@ -57,6 +72,14 @@ tasks:
         pythonVersion: "3.12"
         commands:
           - cd "{{ workingDir }}" && python scripts/run_sql.py scripts/sql/02_deduplicate_sources.sql
+
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
+
 
       - id: test_deduplication
         type: io.kestra.plugin.scripts.python.Commands
@@ -76,6 +99,13 @@ tasks:
         commands:
           - cd "{{ workingDir }}" && python scripts/run_sql.py scripts/sql/03_join_sources.sql
 
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
+
       - id: test_join
         type: io.kestra.plugin.scripts.python.Commands
         taskRunner:
@@ -93,6 +123,13 @@ tasks:
         pythonVersion: "3.12"
         commands:
           - cd "{{ workingDir }}" && python scripts/run_sql.py scripts/sql/04_calculate_revenue.sql
+
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
 
       - id: test_revenue
         type: io.kestra.plugin.scripts.python.Commands
@@ -112,6 +149,13 @@ tasks:
         commands:
           - cd "{{ workingDir }}" && python scripts/classify_wines.py
 
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
+
       - id: test_zscore
         type: io.kestra.plugin.scripts.python.Commands
         taskRunner:
@@ -129,6 +173,13 @@ tasks:
         pythonVersion: "3.12"
         commands:
           - cd "{{ workingDir }}" && python scripts/export_outputs.py
+        
+        retry:
+          type: constant
+          interval: PT5S
+          maxAttempts: 3
+          maxDuration: PT30S
+          warningOnRetry: true
 
       - id: test_outputs
         type: io.kestra.plugin.scripts.python.Commands
@@ -144,4 +195,3 @@ triggers:
     type: io.kestra.plugin.core.trigger.Schedule
     cron: "0 9 15 * *"
     timezone: Europe/Paris
-    

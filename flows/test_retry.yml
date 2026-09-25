@@ -1,0 +1,20 @@
+id: test_retry
+namespace: comptoir.coteaux
+
+tasks:
+  - id: simulated_failure
+    type: io.kestra.plugin.scripts.shell.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+    containerImage: alpine:3.20
+    commands:
+      - echo "Simulation d'un service indisponible"
+      - exit 1
+
+    retry:
+      type: constant
+      interval: PT5S
+      maxAttempts: 3
+      maxDuration: PT30S
+      warningOnRetry: true
+      
